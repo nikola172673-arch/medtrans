@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Медтранс - Ивайло Лазаров ЕООД</title>
+    <meta name="description" content="Свържете се с Медтранс - Ивайло Лазаров ЕООД за медицински транспорт. Телефон: 0890 150 160, имейл: ivailo_73@abv.bg">
+    <meta name="keywords" content="контакти, телефон, имейл, запитване, медицински транспорт">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Bulgarian">
+    <meta name="geo.region" content="BG">
+    <meta name="geo.placename" content="Pleven">
+    <meta name="geo.position" content="43.417;24.607">
+    <meta name="ICBM" content="43.417, 24.607">
+    <link rel="canonical" href="https://medtrans-pleven.com/contact.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-ambulance"></i>
+                <span>Медтранс</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Начало</a>
+                <a href="about.html" class="nav-link">За нас</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="gallery.html" class="nav-link">Галерия</a>
+                <a href="pricing.html" class="nav-link">Цени</a>
+                <a href="contact.html" class="nav-link active">Контакти</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:0890150160" class="btn btn-cta">
+                    <i class="fas fa-phone"></i>
+                    Позвънете
+                </a>
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/24x18/bg.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                            <span>Български</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/24x18/gb.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                            <span>English</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/24x18/de.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                            <span>Deutsch</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/24x18/ru.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/ru.png" alt="RU">
+                            <span>Русский</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Контакти</h1>
+            <p>Свържете се с нас за резервация или информация</p>
+        </div>
+    </section>
+
+    <!-- Contact Main -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h2>Изпратете запитване</h2>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name-detailed">Име *</label>
+                                <input type="text" id="name-detailed" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone-detailed">Телефон *</label>
+                                <input type="tel" id="phone-detailed" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email-detailed">Имейл</label>
+                                <input type="email" id="email-detailed" name="email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service-detailed">Услуга</label>
+                                <select id="service-detailed" name="service">
+                                    <option value="">Изберете услуга</option>
+                                    <option value="medical-transport">Специализиран медицински транспорт</option>
+                                    <option value="repatriation">Репатриране в чужбина</option>
+                                    <option value="medical-team">Медицински екип</option>
+                                    <option value="events">Обслужване на мероприятия</option>
+                                    <option value="hospital-transport">Транспорт до/от лечебни заведения</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="urgency-detailed">Спешност</label>
+                                <select id="urgency-detailed" name="urgency">
+                                    <option value="normal">Обикновена</option>
+                                    <option value="urgent">Спешна</option>
+                                    <option value="emergency">Критична</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferred-date">Предпочитана дата</label>
+                                <input type="date" id="preferred-date" name="preferred-date">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message-detailed">Съобщение</label>
+                            <textarea id="message-detailed" name="message" rows="5" placeholder="Опишете вашите нужди, адрес за вземане, дестинация и други важни детайли..."></textarea>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                <input type="checkbox" name="privacy" id="privacy-checkbox" required style="width: 18px; height: 18px; margin: 0; margin-top: 0.2rem; flex-shrink: 0; cursor: pointer;">
+                                <label for="privacy-checkbox" style="flex: 1; line-height: 1.6; cursor: pointer; color: #4a5568;">
+                                    Съгласявам се с <a href="privacy.html" style="color: #dc2626 !important; text-decoration: underline !important; font-weight: 600 !important;">обработката на личните ми данни</a> *
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Изпрати запитване
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-details">
+                    <h2>Контактна информация</h2>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p><a href="tel:0890150160">0890 150 160</a></p>
+                            <span class="availability">24/7 - Напълно достъпни</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Имейл</h4>
+                            <p><a href="mailto:ivailo_73@abv.bg">ivailo_73@abv.bg</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Работно време</h4>
+                            <p>24 часа на ден, 7 дни в седмицата</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Често задавани въпроси</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Колко време отнема резервацията?</h3>
+                    <p>При обикновени случаи можем да организираме транспорт в рамките на 30-60 минути. При спешни случаи реагираме веднага.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Работите ли през нощта и почивните дни?</h3>
+                    <p>Да, работим 24/7, включително през нощта, почивните дни и празниците. Всегда сме готови за спешни случаи.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Какво включва цената?</h3>
+                    <p>Цената включва транспорта, медицинското оборудване и основния персонал. Медицинският екип се заплаща допълнително при нужда.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Можете ли да транспортирате до чужбина?</h3>
+                    <p>Да, организираме репатриране в Европа и други страни. Цената се определя според дестинацията и необходимите документи.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Какво оборудване имате в линейките?</h3>
+                    <p>Линейките ни са оборудвани с климатик, кислородна система, дефибрилатор, апарати за дишане, монитор, перфузор и всички необходими медицински принадлежности.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Как мога да заплатя услугата?</h3>
+                    <p>Приемаме плащания в брой, по банков път и с фактура за фирми и организации. Плащането може да се извърши след приключване на услугата.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Order Section -->
+    <section class="ready-to-order">
+        <div class="container">
+            <div class="ready-to-order-content">
+                <h2>Готови за поръчка?</h2>
+                <p>Свържете се с нас сега за бърза и професионална медицинска транспортна услуга</p>
+                <a href="tel:0890150160" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    Обадете се: 0890 150 160
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-ambulance"></i>
+                        <span>Медтранс</span>
+                    </div>
+                    <p>Професионален медицински транспорт с над 25 години опит в областта.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">0890 150 160</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:ivailo_73@abv.bg">ivailo_73@abv.bg</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Медицински транспорт</a></li>
+                        <li><a href="services.html">Репатриране</a></li>
+                        <li><a href="services.html">Медицински екип</a></li>
+                        <li><a href="services.html">Мероприятия</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Работно време</h4>
+                    <p><i class="fas fa-clock"></i> 24/7</p>
+                    <p>Напълно достъпни</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени.</p>
+                <p><a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Enhanced form validation for contact page
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form-detailed');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(form);
+                const name = formData.get('name').trim();
+                const phone = formData.get('phone').trim();
+                const email = formData.get('email').trim();
+                const service = formData.get('service');
+                const urgency = formData.get('urgency');
+                const message = formData.get('message').trim();
+                const privacy = formData.get('privacy');
+                
+                // Validation
+                let isValid = true;
+                clearAllErrors();
+                
+                if (!name) {
+                    showFieldError('name-detailed', 'Моля, въведете вашето име');
+                    isValid = false;
+                }
+                
+                if (!phone) {
+                    showFieldError('phone-detailed', 'Моля, въведете вашия телефон');
+                    isValid = false;
+                } else if (!isValidPhone(phone)) {
+                    showFieldError('phone-detailed', 'Моля, въведете валиден телефонен номер');
+                    isValid = false;
+                }
+                
+                if (email && !isValidEmail(email)) {
+                    showFieldError('email-detailed', 'Моля, въведете валиден имейл адрес');
+                    isValid = false;
+                }
+                
+                if (!privacy) {
+                    showFieldError('privacy', 'Моля, съгласете се с обработката на данните');
+                    isValid = false;
+                }
+                
+                if (!isValid) return;
+                
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Изпраща се...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    showNotification('Запитването ви е изпратено успешно! Ще се свържем с вас скоро.', 'success');
+                    form.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 2000);
+            });
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            function isValidPhone(phone) {
+                const phoneRegex = /^(\+359|0)[0-9]{9}$/;
+                return phoneRegex.test(phone.replace(/\s/g, ''));
+            }
+            
+            function showFieldError(fieldName, message) {
+                const field = document.getElementById(fieldName);
+                if (!field) return;
+                
+                const formGroup = field.closest('.form-group') || field.closest('.checkbox-group');
+                if (!formGroup) return;
+                
+                const existingError = formGroup.querySelector('.field-error');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                field.classList.add('error');
+                
+                const errorElement = document.createElement('div');
+                errorElement.className = 'field-error';
+                errorElement.textContent = message;
+                errorElement.style.color = '#e53e3e';
+                errorElement.style.fontSize = '0.875rem';
+                errorElement.style.marginTop = '0.25rem';
+                
+                formGroup.appendChild(errorElement);
+            }
+            
+            function clearAllErrors() {
+                const errorElements = document.querySelectorAll('.field-error');
+                errorElements.forEach(error => error.remove());
+                
+                const errorFields = document.querySelectorAll('.error');
+                errorFields.forEach(field => field.classList.remove('error'));
+            }
+        });
+    </script>
+</body>
+</html>

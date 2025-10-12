@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия - Медтранс - Ивайло Лазаров ЕООД</title>
+    <meta name="description" content="Галерия с наши линейки, медицинско оборудване и екип. Вижте нашата професионална техника и персонал.">
+    <meta name="keywords" content="галерия, линейки, медицинско оборудване, екип, снимки, Плевен">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Bulgarian">
+    <link rel="canonical" href="https://medtrans-pleven.com/gallery.html">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-ambulance"></i>
+                <span>Медтранс</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Начало</a>
+                <a href="about.html" class="nav-link">За нас</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="gallery.html" class="nav-link active">Галерия</a>
+                <a href="pricing.html" class="nav-link">Цени</a>
+                <a href="contact.html" class="nav-link">Контакти</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:0890150160" class="btn btn-cta">
+                    <i class="fas fa-phone"></i>
+                    Позвънете
+                </a>
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/24x18/bg.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                            <span>Български</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/24x18/gb.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                            <span>English</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/24x18/de.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                            <span>Deutsch</span>
+                        </a>
+                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/24x18/ru.png">
+                            <img class="flag-img" src="https://flagcdn.com/24x18/ru.png" alt="RU">
+                            <span>Русский</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Галерия</h1>
+            <p>Нашите линейки, оборудване и професионален екип</p>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all">Всички</button>
+                <button class="filter-btn" data-filter="ambulances">Линейки</button>
+                <button class="filter-btn" data-filter="equipment">Оборудване</button>
+                <button class="filter-btn" data-filter="team">Екип</button>
+                <button class="filter-btn" data-filter="interior">Интериор</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-detailed">
+        <div class="container">
+            <div class="gallery-grid-detailed">
+                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Оборудвана медицинска линейка - външен вид">
+                    <img src="images/ambulance-1.jpg" alt="Линейка 1" class="gallery-image">
+                    <span class="gallery-category">Линейки</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="interior" data-caption="Интериор на линейка - медицинско оборудване">
+                    <img src="images/interior-1.jpg" alt="Интериор" class="gallery-image">
+                    <span class="gallery-category">Интериор</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="equipment" data-caption="Медицинско оборудване - дефибрилатор и монитори">
+                    <img src="images/equipment-1.jpg" alt="Оборудване" class="gallery-image">
+                    <span class="gallery-category">Оборудване</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="team" data-caption="Професионален медицински екип">
+                    <img src="images/team-1.jpg" alt="Екип" class="gallery-image">
+                    <span class="gallery-category">Екип</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Втора линейка - специализирана за реанимация">
+                    <img src="images/ambulance-2.jpg" alt="Линейка 2" class="gallery-image">
+                    <span class="gallery-category">Линейки</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="equipment" data-caption="Кислородна система и апарати за дишане">
+                    <img src="images/equipment-2.jpg" alt="Респираторни" class="gallery-image">
+                    <span class="gallery-category">Оборудване</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="interior" data-caption="Носилки и фиксиращи системи">
+                    <img src="images/interior-2.jpg" alt="Носилки" class="gallery-image">
+                    <span class="gallery-category">Интериор</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="team" data-caption="Медицински персонал в действие">
+                    <img src="images/team-2.jpg" alt="Персонал" class="gallery-image">
+                    <span class="gallery-category">Екип</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка в действие - спешна ситуация">
+                    <img src="images/ambulance-3.jpg" alt="Действие" class="gallery-image">
+                    <span class="gallery-category">Линейки</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="equipment" data-caption="Монитор за жизнени показатели">
+                    <img src="images/equipment-3.jpg" alt="Монитори" class="gallery-image">
+                    <span class="gallery-category">Оборудване</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="interior" data-caption="Климатик и вентилация в линейката">
+                    <img src="images/interior-3.jpg" alt="Климатик" class="gallery-image">
+                    <span class="gallery-category">Интериор</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="team" data-caption="Квалифициран медицински специалист">
+                    <img src="images/team-3.jpg" alt="Специалист" class="gallery-image">
+                    <span class="gallery-category">Екип</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка тип Б - реанимобил">
+                    <img src="images/ambulance-4.jpg" alt="Реанимобил" class="gallery-image">
+                    <span class="gallery-category">Линейки</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="equipment" data-caption="Перфузор и инфузионни помпи">
+                    <img src="images/equipment-4.jpg" alt="Перфузор" class="gallery-image">
+                    <span class="gallery-category">Оборудване</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="interior" data-caption="Осветление и работно пространство">
+                    <img src="images/interior-4.jpg" alt="Осветление" class="gallery-image">
+                    <span class="gallery-category">Интериор</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="equipment" data-caption="Спинална дъска и имобилизация">
+                    <img src="images/equipment-5.jpg" alt="Имобилизация" class="gallery-image">
+                    <span class="gallery-category">Оборудване</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка с повдигната платформа">
+                    <img src="images/ambulance-5.jpg" alt="Платформа" class="gallery-image">
+                    <span class="gallery-category">Линейки</span>
+                </div>
+                
+                <div class="gallery-item-detailed" data-category="team" data-caption="Екип при спешна интервенция">
+                    <img src="images/team-4.jpg" alt="Интервенция" class="gallery-image">
+                    <span class="gallery-category">Екип</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Видео галерия</h2>
+                <p>Вижте нашите линейки в действие</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play"></i>
+                        <p>Линейка в движение</p>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play"></i>
+                        <p>Оборудване в действие</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready to Order Section -->
+    <section class="ready-to-order">
+        <div class="container">
+            <div class="ready-to-order-content">
+                <h2>Готови за поръчка?</h2>
+                <p>Свържете се с нас сега за бърза и професионална медицинска транспортна услуга</p>
+                <a href="tel:0890150160" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    Обадете се: 0890 150 160
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-ambulance"></i>
+                        <span>Медтранс</span>
+                    </div>
+                    <p>Професионален медицински транспорт с над 25 години опит в областта.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">0890 150 160</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:ivailo_73@abv.bg">ivailo_73@abv.bg</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Медицински транспорт</a></li>
+                        <li><a href="services.html">Репатриране</a></li>
+                        <li><a href="services.html">Медицински екип</a></li>
+                        <li><a href="services.html">Мероприятия</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Работно време</h4>
+                    <p><i class="fas fa-clock"></i> 24/7</p>
+                    <p>Напълно достъпни</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени.</p>
+                <p><a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="gallery-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <div class="modal-caption" id="modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Gallery filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item-detailed');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeInUp 0.5s ease-out';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
