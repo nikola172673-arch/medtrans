@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, overflow-x=hidden">
     <title>Услуги - Медтранс - Ивайло Лазаров ЕООД</title>
     <meta name="description" content="Специализирани медицински транспортни услуги: линейки, репатриране в чужбина, медицински екип, обслужване на мероприятия. Професионален транспорт 24/7.">
     <meta name="keywords" content="медицински транспорт, линейка, репатриране, медицински екип, мероприятия, Плевен">
@@ -39,32 +39,68 @@
                 <a href="gallery.html" class="nav-link">Галерия</a>
                 <a href="pricing.html" class="nav-link">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
+                
+                <!-- Mobile Call Button -->
+                <div class="mobile-nav-action">
+                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
+                    </a>
+                </div>
+                
+                <!-- Mobile Language Selector -->
+                <div class="mobile-nav-action">
+                    <div class="language-selector mobile-language-selector">
+                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
+                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
+                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                                <span>Български</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
+                                <span>English</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
+                                <span>Deutsch</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
+                                <span>Русский</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta">
+                <a href="tel:0890150160" class="btn btn-cta desktop-only">
                     <i class="fas fa-phone"></i>
                     Позвънете
                 </a>
-                <div class="language-selector">
+                <div class="language-selector desktop-only">
                     <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/24x18/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                             <span>Български</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/24x18/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
                             <span>English</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/24x18/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
                             <span>Deutsch</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/24x18/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/ru.png" alt="RU">
+                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
                             <span>Русский</span>
                         </a>
                     </div>
@@ -77,6 +113,9 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -184,6 +223,25 @@
                     
                     <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
                 </div>
+                
+                <div class="service-card-detailed">
+                    <div class="service-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Транспорт на хора с увреждания</h3>
+                    <p>Специализиран транспорт с подходящо оборудване за хора с ограничена подвижност. Осигуряваме достъпни линейки и професионално отношение.</p>
+                    
+                    <h4>Включва:</h4>
+                    <ul class="service-features">
+                        <li>Специализирани линейки с рампи</li>
+                        <li>Оборудване за хора с увреждания</li>
+                        <li>Обучен персонал</li>
+                        <li>Индивидуален подход</li>
+                        <li>Максимален комфорт и сигурност</li>
+                    </ul>
+                    
+                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                </div>
             </div>
         </div>
     </section>
@@ -231,13 +289,35 @@
                 </div>
                 
                 <div class="equipment-category-detailed">
-                    <h3><i class="fas fa-first-aid"></i> Иммобилизация и защита</h3>
+                    <h3><i class="fas fa-first-aid"></i> Имобилизация и защита</h3>
                     <ul>
-                        <li>Шини за иммобилизация</li>
+                        <li>Шини за имобилизация</li>
                         <li>Шийни яки за стабилизация</li>
                         <li>Специализирани приспособления</li>
                         <li>Защитни елементи</li>
                         <li>Фиксиращи ленти</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-category-detailed">
+                    <h3><i class="fas fa-syringe"></i> Медикаменти и консумативи</h3>
+                    <ul>
+                        <li>Спешни медикаменти</li>
+                        <li>Инфузионни разтвори</li>
+                        <li>Аналгетици</li>
+                        <li>Антисептици</li>
+                        <li>Превързочни материали</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-category-detailed">
+                    <h3><i class="fas fa-stethoscope"></i> Диагностично оборудване</h3>
+                    <ul>
+                        <li>Стетоскоп</li>
+                        <li>Тонометър</li>
+                        <li>Пулсоксиметър</li>
+                        <li>Термометър</li>
+                        <li>Глюкомер</li>
                     </ul>
                 </div>
             </div>
@@ -332,11 +412,16 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени.</p>
-                <p><a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени. | <a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+                <p class="footer-credit">Design by <a href="https://boragoweb.com" target="_blank" rel="noopener">BoragoWeb</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Settings Button -->
+    <button class="cookie-settings-btn" id="cookie-settings-btn" title="Настройки за бисквитки">
+        <i class="fas fa-cookie-bite"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>

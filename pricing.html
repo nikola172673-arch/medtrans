@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, overflow-x=hidden">
     <title>Цени - Медтранс - Ивайло Лазаров ЕООД</title>
     <meta name="description" content="Прозрачно ценообразуване за медицински транспорт. Цени по километри без скрити такси. Включена цялостна услуга.">
     <meta name="keywords" content="цени, ценообразуване, медицински транспорт, километри, такси, Плевен">
@@ -37,32 +37,68 @@
                 <a href="gallery.html" class="nav-link">Галерия</a>
                 <a href="pricing.html" class="nav-link active">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
+                
+                <!-- Mobile Call Button -->
+                <div class="mobile-nav-action">
+                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
+                    </a>
+                </div>
+                
+                <!-- Mobile Language Selector -->
+                <div class="mobile-nav-action">
+                    <div class="language-selector mobile-language-selector">
+                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
+                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
+                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                                <span>Български</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
+                                <span>English</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
+                                <span>Deutsch</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
+                                <span>Русский</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta">
+                <a href="tel:0890150160" class="btn btn-cta desktop-only">
                     <i class="fas fa-phone"></i>
                     Позвънете
                 </a>
-                <div class="language-selector">
+                <div class="language-selector desktop-only">
                     <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/24x18/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                             <span>Български</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/24x18/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
                             <span>English</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/24x18/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
                             <span>Deutsch</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/24x18/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/ru.png" alt="RU">
+                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
                             <span>Русский</span>
                         </a>
                     </div>
@@ -75,6 +111,9 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -184,85 +223,6 @@
         </div>
     </section>
 
-    <!-- Price Calculator -->
-    <section class="price-calculator">
-        <div class="container">
-            <h2>Калкулатор на цена</h2>
-            <div class="calculator-container">
-                <div class="calculator-form">
-                    <div class="form-group">
-                        <label for="distance">Разстояние (км)</label>
-                        <input type="number" id="distance" placeholder="Въведете километри">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service-type">Тип услуга</label>
-                        <select id="service-type">
-                            <option value="basic">Основен транспорт (1.50 лв/км)</option>
-                            <option value="specialized">Специализиран транспорт (2.00 лв/км)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="medical-team">Медицински екип</label>
-                        <select id="medical-team">
-                            <option value="no">Без медицински екип</option>
-                            <option value="yes">С медицински екип (50 лв/час)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="hours">Часове медицински екип</label>
-                        <input type="number" id="hours" placeholder="Брой часове" disabled>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="urgency">Спешност</label>
-                        <select id="urgency">
-                            <option value="normal">Обикновена</option>
-                            <option value="urgent">Спешна (+50%)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="time">Време на деня</label>
-                        <select id="time">
-                            <option value="day">Ден (06:00-22:00)</option>
-                            <option value="night">Нощ (+20%)</option>
-                        </select>
-                    </div>
-                    
-                    <button type="button" id="calculate-btn" class="btn btn-primary">Изчисли цена</button>
-                </div>
-                
-                <div class="calculator-result">
-                    <h3>Приблизителна цена</h3>
-                    <div class="result-breakdown">
-                        <div class="result-item">
-                            <span>Транспорт:</span>
-                            <span id="transport-cost">0.00 лв</span>
-                        </div>
-                        <div class="result-item">
-                            <span>Медицински екип:</span>
-                            <span id="team-cost">0.00 лв</span>
-                        </div>
-                        <div class="result-item">
-                            <span>Допълнителни такси:</span>
-                            <span id="additional-cost">0.00 лв</span>
-                        </div>
-                        <div class="result-total">
-                            <span>Общо:</span>
-                            <span id="total-cost">0.00 лв</span>
-                        </div>
-                    </div>
-                    <div class="result-note">
-                        <small>* Това е приблизителна цена. За точна оферта се свържете с нас.</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Payment Methods -->
     <section class="payment-methods">
         <div class="container">
@@ -347,57 +307,17 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени.</p>
-                <p><a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени. | <a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+                <p class="footer-credit">Design by <a href="https://boragoweb.com" target="_blank" rel="noopener">BoragoWeb</a></p>
             </div>
         </div>
     </footer>
 
+    <!-- Cookie Settings Button -->
+    <button class="cookie-settings-btn" id="cookie-settings-btn" title="Настройки за бисквитки">
+        <i class="fas fa-cookie-bite"></i>
+    </button>
+
     <script src="js/script.js"></script>
-    <script>
-        // Price calculator functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const calculateBtn = document.getElementById('calculate-btn');
-            const medicalTeamSelect = document.getElementById('medical-team');
-            const hoursInput = document.getElementById('hours');
-            
-            // Enable/disable hours input based on medical team selection
-            medicalTeamSelect.addEventListener('change', function() {
-                hoursInput.disabled = this.value === 'no';
-                if (this.value === 'no') {
-                    hoursInput.value = '';
-                }
-            });
-            
-            calculateBtn.addEventListener('click', function() {
-                const distance = parseFloat(document.getElementById('distance').value) || 0;
-                const serviceType = document.getElementById('service-type').value;
-                const medicalTeam = document.getElementById('medical-team').value;
-                const hours = parseFloat(document.getElementById('hours').value) || 0;
-                const urgency = document.getElementById('urgency').value;
-                const time = document.getElementById('time').value;
-                
-                // Calculate transport cost
-                let transportRate = serviceType === 'specialized' ? 2.00 : 1.50;
-                let transportCost = Math.max(distance * transportRate, serviceType === 'specialized' ? 40 : 30);
-                
-                // Calculate medical team cost
-                let teamCost = medicalTeam === 'yes' ? hours * 50 : 0;
-                
-                // Calculate additional costs
-                let additionalRate = 0;
-                if (urgency === 'urgent') additionalRate += 0.5;
-                if (time === 'night') additionalRate += 0.2;
-                
-                let additionalCost = transportCost * additionalRate;
-                
-                // Update display
-                document.getElementById('transport-cost').textContent = transportCost.toFixed(2) + ' лв';
-                document.getElementById('team-cost').textContent = teamCost.toFixed(2) + ' лв';
-                document.getElementById('additional-cost').textContent = additionalCost.toFixed(2) + ' лв';
-                document.getElementById('total-cost').textContent = (transportCost + teamCost + additionalCost).toFixed(2) + ' лв';
-            });
-        });
-    </script>
 </body>
 </html>

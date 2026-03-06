@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, overflow-x=hidden">
     <title>Медтранс - Ивайло Лазаров ЕООД | Медицински транспорт 24/7</title>
     <meta name="description" content="Специализиран медицински транспорт с над 25 години опит. Репатриране в чужбина, медицински екип, оборудвани линейки. Плевен и цяла България.">
     <meta name="keywords" content="медицински транспорт, линейка, репатриране, медицински екип, Плевен, България">
@@ -52,32 +52,68 @@
                 <a href="gallery.html" class="nav-link">Галерия</a>
                 <a href="pricing.html" class="nav-link">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
+                
+                <!-- Mobile Call Button -->
+                <div class="mobile-nav-action">
+                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
+                    </a>
+                </div>
+                
+                <!-- Mobile Language Selector -->
+                <div class="mobile-nav-action">
+                    <div class="language-selector mobile-language-selector">
+                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
+                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
+                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                                <span>Български</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
+                                <span>English</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
+                                <span>Deutsch</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
+                                <span>Русский</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta">
+                <a href="tel:0890150160" class="btn btn-cta desktop-only">
                     <i class="fas fa-phone"></i>
                     Позвънете
                 </a>
-                <div class="language-selector">
+                <div class="language-selector desktop-only">
                     <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/24x18/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                             <span>Български</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/24x18/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
                             <span>English</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/24x18/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
                             <span>Deutsch</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/24x18/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/ru.png" alt="RU">
+                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
                             <span>Русский</span>
                         </a>
                     </div>
@@ -90,6 +126,9 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -207,6 +246,33 @@
                     <button class="btn btn-outline">Виж повече</button>
                 </div>
                 
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Транспорт до/от лечебни заведения</h3>
+                    <p>Безопасно транспортиране на пациенти до болници, клиники и медицински центрове.</p>
+                    <button class="btn btn-outline">Виж повече</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Обслужване на мероприятия</h3>
+                    <p>Медицинско обслужване на спортни и културни събития с оборудвана линейка.</p>
+                    <button class="btn btn-outline">Виж повече</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h3>Транспорт на хора с увреждания</h3>
+                    <p>Специализиран транспорт с подходящо оборудване за хора с ограничена подвижност.</p>
+                    <button class="btn btn-outline">Виж повече</button>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -220,39 +286,68 @@
             </div>
             <div class="equipment-grid">
                 <div class="equipment-category">
-                    <h3><i class="fas fa-snowflake"></i> Климатизация</h3>
+                    <h3><i class="fas fa-snowflake"></i> Климатизация и комфорт</h3>
                     <ul>
-                        <li>Климатик</li>
-                        <li>Кислородна система</li>
+                        <li>Климатик за контрол на температурата</li>
+                        <li>Кислородна система за респираторна поддръжка</li>
+                        <li>Вентилационна система</li>
+                        <li>Осветление за различни ситуации</li>
                     </ul>
                 </div>
                 
                 <div class="equipment-category">
-                    <h3><i class="fas fa-bed"></i> Носилки</h3>
+                    <h3><i class="fas fa-bed"></i> Носилки и транспорт</h3>
                     <ul>
-                        <li>Въздушна възглавница</li>
+                        <li>Въздушна възглавница за комфорт</li>
                         <li>Шалте тип носилка</li>
                         <li>Инвалиден стол</li>
+                        <li>Специализирани носилки за различни състояния</li>
+                        <li>Фиксиращи системи</li>
                     </ul>
                 </div>
                 
                 <div class="equipment-category">
                     <h3><i class="fas fa-heartbeat"></i> Медицинска техника</h3>
                     <ul>
-                        <li>Дефибрилатор</li>
+                        <li>Дефибрилатор за спешни случаи</li>
                         <li>Апарати за дишане</li>
-                        <li>Монитор</li>
-                        <li>Перфузор</li>
+                        <li>Монитор за жизнени показатели</li>
+                        <li>Перфузор за медикаменти</li>
                         <li>Аспиратор</li>
+                        <li>Оксиметър за измерване на кислорода</li>
                     </ul>
                 </div>
                 
                 <div class="equipment-category">
-                    <h3><i class="fas fa-first-aid"></i> Имобилизация</h3>
+                    <h3><i class="fas fa-first-aid"></i> Имобилизация и защита</h3>
                     <ul>
-                        <li>Шини</li>
-                        <li>Шийни яки</li>
-                        <li>Други приспособления</li>
+                        <li>Шини за имобилизация</li>
+                        <li>Шийни яки за стабилизация</li>
+                        <li>Специализирани приспособления</li>
+                        <li>Защитни елементи</li>
+                        <li>Фиксиращи ленти</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-category">
+                    <h3><i class="fas fa-syringe"></i> Медикаменти и консумативи</h3>
+                    <ul>
+                        <li>Спешни медикаменти</li>
+                        <li>Инфузионни разтвори</li>
+                        <li>Аналгетици</li>
+                        <li>Антисептици</li>
+                        <li>Превързочни материали</li>
+                    </ul>
+                </div>
+                
+                <div class="equipment-category">
+                    <h3><i class="fas fa-stethoscope"></i> Диагностично оборудване</h3>
+                    <ul>
+                        <li>Стетоскоп</li>
+                        <li>Тонометър</li>
+                        <li>Пулсоксиметър</li>
+                        <li>Термометър</li>
+                        <li>Глюкомер</li>
                     </ul>
                 </div>
             </div>
@@ -287,54 +382,6 @@
                     <h3>Запитайте цена</h3>
                     <p>Свържете се с нас за персонализирана оферта</p>
                     <a href="#contact" class="btn btn-primary">Запитай цена</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2>Галерия</h2>
-                <p>Нашите линейки и оборудване</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" data-caption="Оборудвана медицинска линейка">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-ambulance"></i>
-                        <p>Линейка 1</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-caption="Медицински екип">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-user-md"></i>
-                        <p>Екип</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-caption="Медицинско оборудване">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-stethoscope"></i>
-                        <p>Оборудване</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-caption="Интериор на линейка">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-bed"></i>
-                        <p>Интериор</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-caption="Медицински инструменти">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-first-aid"></i>
-                        <p>Инструменти</p>
-                    </div>
-                </div>
-                <div class="gallery-item" data-caption="Линейка при действие">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-ambulance"></i>
-                        <p>Действие</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -466,7 +513,7 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени. | <a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
-                <p class="footer-credit">Design by <a href="https://boragoweb.eu" target="_blank" rel="noopener">BoragoWeb</a></p>
+                <p class="footer-credit">Design by <a href="https://boragoweb.com" target="_blank" rel="noopener">BoragoWeb</a></p>
             </div>
         </div>
     </footer>

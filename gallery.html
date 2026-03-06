@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, overflow-x=hidden">
     <title>Галерия - Медтранс - Ивайло Лазаров ЕООД</title>
     <meta name="description" content="Галерия с наши линейки, медицинско оборудване и екип. Вижте нашата професионална техника и персонал.">
     <meta name="keywords" content="галерия, линейки, медицинско оборудване, екип, снимки, Плевен">
@@ -37,32 +37,68 @@
                 <a href="gallery.html" class="nav-link active">Галерия</a>
                 <a href="pricing.html" class="nav-link">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
+                
+                <!-- Mobile Call Button -->
+                <div class="mobile-nav-action">
+                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
+                    </a>
+                </div>
+                
+                <!-- Mobile Language Selector -->
+                <div class="mobile-nav-action">
+                    <div class="language-selector mobile-language-selector">
+                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
+                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
+                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                                <span>Български</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
+                                <span>English</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
+                                <span>Deutsch</span>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
+                                <span>Русский</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta">
+                <a href="tel:0890150160" class="btn btn-cta desktop-only">
                     <i class="fas fa-phone"></i>
                     Позвънете
                 </a>
-                <div class="language-selector">
+                <div class="language-selector desktop-only">
                     <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/24x18/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
                             <span>Български</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/24x18/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
                             <span>English</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/24x18/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
                             <span>Deutsch</span>
                         </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/24x18/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/24x18/ru.png" alt="RU">
+                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
+                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
                             <span>Русский</span>
                         </a>
                     </div>
@@ -75,6 +111,9 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="nav-overlay"></div>
 
     <!-- Page Header -->
     <section class="page-header">
@@ -102,92 +141,92 @@
         <div class="container">
             <div class="gallery-grid-detailed">
                 <div class="gallery-item-detailed" data-category="ambulances" data-caption="Оборудвана медицинска линейка - външен вид">
-                    <img src="images/ambulance-1.jpg" alt="Линейка 1" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=800&h=800&fit=crop" alt="Линейка 1" class="gallery-image">
                     <span class="gallery-category">Линейки</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="interior" data-caption="Интериор на линейка - медицинско оборудване">
-                    <img src="images/interior-1.jpg" alt="Интериор" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=800&fit=crop" alt="Интериор" class="gallery-image">
                     <span class="gallery-category">Интериор</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="equipment" data-caption="Медицинско оборудване - дефибрилатор и монитори">
-                    <img src="images/equipment-1.jpg" alt="Оборудване" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&h=800&fit=crop" alt="Оборудване" class="gallery-image">
                     <span class="gallery-category">Оборудване</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="team" data-caption="Професионален медицински екип">
-                    <img src="images/team-1.jpg" alt="Екип" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=800&fit=crop" alt="Екип" class="gallery-image">
                     <span class="gallery-category">Екип</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="ambulances" data-caption="Втора линейка - специализирана за реанимация">
-                    <img src="images/ambulance-2.jpg" alt="Линейка 2" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=800&fit=crop" alt="Линейка 2" class="gallery-image">
                     <span class="gallery-category">Линейки</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="equipment" data-caption="Кислородна система и апарати за дишане">
-                    <img src="images/equipment-2.jpg" alt="Респираторни" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?w=800&h=800&fit=crop" alt="Респираторни" class="gallery-image">
                     <span class="gallery-category">Оборудване</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="interior" data-caption="Носилки и фиксиращи системи">
-                    <img src="images/interior-2.jpg" alt="Носилки" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=800&fit=crop" alt="Носилки" class="gallery-image">
                     <span class="gallery-category">Интериор</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="team" data-caption="Медицински персонал в действие">
-                    <img src="images/team-2.jpg" alt="Персонал" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=800&fit=crop" alt="Персонал" class="gallery-image">
                     <span class="gallery-category">Екип</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка в действие - спешна ситуация">
-                    <img src="images/ambulance-3.jpg" alt="Действие" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=800&h=800&fit=crop" alt="Действие" class="gallery-image">
                     <span class="gallery-category">Линейки</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="equipment" data-caption="Монитор за жизнени показатели">
-                    <img src="images/equipment-3.jpg" alt="Монитори" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&h=800&fit=crop" alt="Монитори" class="gallery-image">
                     <span class="gallery-category">Оборудване</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="interior" data-caption="Климатик и вентилация в линейката">
-                    <img src="images/interior-3.jpg" alt="Климатик" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=800&fit=crop" alt="Климатик" class="gallery-image">
                     <span class="gallery-category">Интериор</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="team" data-caption="Квалифициран медицински специалист">
-                    <img src="images/team-3.jpg" alt="Специалист" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=800&fit=crop" alt="Специалист" class="gallery-image">
                     <span class="gallery-category">Екип</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка тип Б - реанимобил">
-                    <img src="images/ambulance-4.jpg" alt="Реанимобил" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=800&h=800&fit=crop&sat=-100" alt="Реанимобил" class="gallery-image">
                     <span class="gallery-category">Линейки</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="equipment" data-caption="Перфузор и инфузионни помпи">
-                    <img src="images/equipment-4.jpg" alt="Перфузор" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=800&fit=crop" alt="Перфузор" class="gallery-image">
                     <span class="gallery-category">Оборудване</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="interior" data-caption="Осветление и работно пространство">
-                    <img src="images/interior-4.jpg" alt="Осветление" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=800&fit=crop" alt="Осветление" class="gallery-image">
                     <span class="gallery-category">Интериор</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="equipment" data-caption="Спинална дъска и имобилизация">
-                    <img src="images/equipment-5.jpg" alt="Имобилизация" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&h=800&fit=crop" alt="Имобилизация" class="gallery-image">
                     <span class="gallery-category">Оборудване</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка с повдигната платформа">
-                    <img src="images/ambulance-5.jpg" alt="Платформа" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&h=800&fit=crop" alt="Платформа" class="gallery-image">
                     <span class="gallery-category">Линейки</span>
                 </div>
                 
                 <div class="gallery-item-detailed" data-category="team" data-caption="Екип при спешна интервенция">
-                    <img src="images/team-4.jpg" alt="Интервенция" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=800&fit=crop" alt="Интервенция" class="gallery-image">
                     <span class="gallery-category">Екип</span>
                 </div>
             </div>
@@ -272,11 +311,16 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени.</p>
-                <p><a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+                <p>&copy; 2025 Медтранс – Ивайло Лазаров ЕООД. Всички права запазени. | <a href="privacy.html" style="color: #dc2626; text-decoration: none;">Политика за поверителност</a></p>
+                <p class="footer-credit">Design by <a href="https://boragoweb.com" target="_blank" rel="noopener">BoragoWeb</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- Cookie Settings Button -->
+    <button class="cookie-settings-btn" id="cookie-settings-btn" title="Настройки за бисквитки">
+        <i class="fas fa-cookie-bite"></i>
+    </button>
 
     <!-- Gallery Modal -->
     <div class="modal" id="gallery-modal">
