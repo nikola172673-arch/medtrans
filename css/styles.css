@@ -2105,6 +2105,13 @@ body.cursor-large .cookie-settings-btn {
 }
 
 @media (max-width: 768px) {
+    /* Force text visibility on mobile */
+    * {
+        -webkit-text-fill-color: inherit !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
     .nav-container {
         flex-wrap: wrap;
     }
@@ -2127,6 +2134,10 @@ body.cursor-large .cookie-settings-btn {
         z-index: 998;
         overflow-y: auto;
         border-right: 1px solid rgba(220, 38, 38, 0.1);
+        color: #2d3748 !important;
+        -webkit-text-fill-color: #2d3748;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .nav-actions {
@@ -2191,10 +2202,13 @@ body.cursor-large .cookie-settings-btn {
         align-items: center;
         width: 100%;
         text-decoration: none;
-        color: #2d3748;
+        color: #000000 !important;
         font-weight: 500;
         position: relative;
         overflow: hidden;
+        -webkit-text-fill-color: #000000;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .nav-link::before {
@@ -2211,7 +2225,7 @@ body.cursor-large .cookie-settings-btn {
     
     .nav-link:hover {
         background: linear-gradient(90deg, rgba(220, 38, 38, 0.05) 0%, rgba(220, 38, 38, 0.02) 100%);
-        color: #dc2626;
+        color: #000000 !important;
         padding-left: 2.5rem;
     }
     
@@ -2221,7 +2235,7 @@ body.cursor-large .cookie-settings-btn {
     
     .nav-link.active {
         background: linear-gradient(90deg, rgba(220, 38, 38, 0.1) 0%, rgba(220, 38, 38, 0.05) 100%);
-        color: #dc2626;
+        color: #000000 !important;
         font-weight: 600;
     }
     
@@ -2239,6 +2253,10 @@ body.cursor-large .cookie-settings-btn {
         border-top: 1px solid rgba(0, 0, 0, 0.08);
         background: rgba(248, 249, 250, 0.5);
         position: relative;
+        color: #2d3748 !important;
+        -webkit-text-fill-color: #2d3748;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .mobile-nav-action:first-of-type {
@@ -2259,7 +2277,7 @@ body.cursor-large .cookie-settings-btn {
         justify-content: center;
         gap: 0.75rem;
         background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-        color: white;
+        color: white !important;
         border: none;
         border-radius: 12px;
         text-decoration: none;
@@ -2268,6 +2286,9 @@ body.cursor-large .cookie-settings-btn {
         box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
         position: relative;
         overflow: hidden;
+        -webkit-text-fill-color: white;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .mobile-call-btn::before {
@@ -2297,6 +2318,10 @@ body.cursor-large .cookie-settings-btn {
     
     .mobile-language-selector {
         position: relative;
+        color: #2d3748 !important;
+        -webkit-text-fill-color: #2d3748;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .mobile-lang-btn {
@@ -2311,6 +2336,10 @@ body.cursor-large .cookie-settings-btn {
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        color: #2d3748 !important;
+        -webkit-text-fill-color: #2d3748;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .mobile-lang-btn:hover {
@@ -2333,6 +2362,10 @@ body.cursor-large .cookie-settings-btn {
         z-index: 1000;
         display: none;
         overflow: hidden;
+        color: #2d3748 !important;
+        -webkit-text-fill-color: #2d3748;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
     .mobile-lang-dropdown.active {
