@@ -2083,6 +2083,27 @@ body.cursor-large .cookie-settings-btn {
     }
 }
 
+/* Hide mobile elements on desktop */
+.mobile-nav-action {
+    display: none !important;
+}
+
+.mobile-language-selector {
+    display: none !important;
+}
+
+.mobile-call-btn {
+    display: none !important;
+}
+
+.mobile-lang-btn {
+    display: none !important;
+}
+
+.mobile-lang-dropdown {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .nav-container {
         flex-wrap: wrap;
@@ -2114,6 +2135,27 @@ body.cursor-large .cookie-settings-btn {
     
     .desktop-only {
         display: none !important;
+    }
+    
+    /* Show mobile elements on mobile */
+    .mobile-nav-action {
+        display: block !important;
+    }
+    
+    .mobile-language-selector {
+        display: block !important;
+    }
+    
+    .mobile-call-btn {
+        display: flex !important;
+    }
+    
+    .mobile-lang-btn {
+        display: flex !important;
+    }
+    
+    .mobile-lang-dropdown {
+        display: block !important;
     }
 
     .nav-menu.active {
