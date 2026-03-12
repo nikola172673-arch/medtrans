@@ -26,84 +26,61 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#home" class="nav-logo">
                 <i class="fas fa-ambulance"></i>
                 <span>Медтранс</span>
-            </div>
+            </a>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Начало</a>
                 <a href="about.html" class="nav-link">За нас</a>
                 <a href="services.html" class="nav-link">Услуги</a>
                 <a href="gallery.html" class="nav-link active">Галерия</a>
-                <a href="pricing.html" class="nav-link">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
                 
                 <!-- Mobile Call Button -->
                 <div class="mobile-nav-action">
-                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
-                        <i class="fas fa-phone"></i>
-                        Позвънете
-                    </a>
-                </div>
-                
-                <!-- Mobile Language Selector -->
-                <div class="mobile-nav-action">
-                    <div class="language-selector mobile-language-selector">
-                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
-                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                    <div class="mobile-call-dropdown">
+                        <button class="btn btn-cta mobile-call-btn" id="mobile-call-btn">
+                            <i class="fas fa-phone"></i>
+                            Позвънете
                             <i class="fas fa-chevron-down"></i>
                         </button>
-                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
-                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
-                                <span>Български</span>
+                        <div class="mobile-call-options" id="mobile-call-options">
+                            <a href="tel:0890150160" class="mobile-call-option">
+                                <i class="fas fa-phone"></i>
+                                <span>Плевен</span>
+                                <small>0890 150 160</small>
                             </a>
-                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
-                                <span>English</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
-                                <span>Deutsch</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
-                                <span>Русский</span>
+                            <a href="tel:0888645380" class="mobile-call-option">
+                                <i class="fas fa-phone"></i>
+                                <span>В. Търново</span>
+                                <small>0888 645 380</small>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta desktop-only">
-                    <i class="fas fa-phone"></i>
-                    Позвънете
-                </a>
-                <div class="language-selector desktop-only">
-                    <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                <div class="desktop-call-dropdown">
+                    <button class="btn btn-cta desktop-call-btn" id="desktop-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
-                            <span>Български</span>
+                    <div class="desktop-call-options" id="desktop-call-options">
+                        <a href="tel:0890150160" class="desktop-call-option">
+                            <i class="fas fa-phone"></i>
+                            <span>Плевен</span>
+                            <small>0890 150 160</small>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
-                            <span>English</span>
-                        </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
-                            <span>Deutsch</span>
-                        </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
-                            <span>Русский</span>
+                        <a href="tel:0888645380" class="desktop-call-option">
+                            <i class="fas fa-phone"></i>
+                            <span>В. Търново</span>
+                            <small>0888 645 380</small>
                         </a>
                     </div>
                 </div>
-            </div>
+                </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -115,119 +92,126 @@
     <!-- Mobile Menu Overlay -->
     <div class="nav-overlay" id="nav-overlay"></div>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Галерия</h1>
-            <p>Нашите линейки, оборудване и професионален екип</p>
-        </div>
-    </section>
-
-    <!-- Gallery Categories -->
-    <section class="gallery-categories">
-        <div class="container">
-            <div class="category-filters">
-                <button class="filter-btn active" data-filter="all">Всички</button>
-                <button class="filter-btn" data-filter="ambulances">Линейки</button>
-                <button class="filter-btn" data-filter="equipment">Оборудване</button>
-                <button class="filter-btn" data-filter="team">Екип</button>
-                <button class="filter-btn" data-filter="interior">Интериор</button>
-            </div>
-        </div>
-    </section>
-
     <!-- Gallery Grid -->
     <section class="gallery-detailed">
         <div class="container">
             <div class="gallery-grid-detailed">
-                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Оборудвана медицинска линейка - външен вид">
-                    <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=800&h=800&fit=crop" alt="Линейка 1" class="gallery-image">
-                    <span class="gallery-category">Линейки</span>
+                <div class="gallery-item-detailed" data-caption="Медицински транспорт">
+                    <img src="images/4DEBAD76-6EA8-4FB1-A9E4-71ECB13B980E.JPG" alt="Линейка" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="interior" data-caption="Интериор на линейка - медицинско оборудване">
-                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=800&fit=crop" alt="Интериор" class="gallery-image">
-                    <span class="gallery-category">Интериор</span>
+                <div class="gallery-item-detailed" data-caption="Медицински екип">
+                    <img src="images/FullSizeRender.heic" alt="Екип" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="equipment" data-caption="Медицинско оборудване - дефибрилатор и монитори">
-                    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=800&h=800&fit=crop" alt="Оборудване" class="gallery-image">
-                    <span class="gallery-category">Оборудване</span>
+                <div class="gallery-item-detailed" data-caption="Спешна помощ">
+                    <img src="images/IMG_0345.HEIC" alt="Спешна" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="team" data-caption="Професионален медицински екип">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=800&fit=crop" alt="Екип" class="gallery-image">
-                    <span class="gallery-category">Екип</span>
+                <div class="gallery-item-detailed" data-caption="Пациентски транспорт">
+                    <img src="images/IMG_0355.HEIC" alt="Транспорт" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Втора линейка - специализирана за реанимация">
-                    <img src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=800&fit=crop" alt="Линейка 2" class="gallery-image">
-                    <span class="gallery-category">Линейки</span>
+                <div class="gallery-item-detailed" data-caption="Линейка в действие">
+                    <img src="images/IMG_1963.HEIC" alt="Действие" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="equipment" data-caption="Кислородна система и апарати за дишане">
-                    <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?w=800&h=800&fit=crop" alt="Респираторни" class="gallery-image">
-                    <span class="gallery-category">Оборудване</span>
+                <div class="gallery-item-detailed" data-caption="Интериор">
+                    <img src="images/IMG_2084.JPG" alt="Интериор" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="interior" data-caption="Носилки и фиксиращи системи">
-                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=800&fit=crop" alt="Носилки" class="gallery-image">
-                    <span class="gallery-category">Интериор</span>
+                <div class="gallery-item-detailed" data-caption="Медицинско оборудване">
+                    <img src="images/IMG_2328.HEIC" alt="Оборудване" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="team" data-caption="Медицински персонал в действие">
-                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&h=800&fit=crop" alt="Персонал" class="gallery-image">
-                    <span class="gallery-category">Екип</span>
+                <div class="gallery-item-detailed" data-caption="Професионален екип">
+                    <img src="images/IMG_2403.HEIC" alt="Екип" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка в действие - спешна ситуация">
-                    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=800&h=800&fit=crop" alt="Действие" class="gallery-image">
-                    <span class="gallery-category">Линейки</span>
+                <div class="gallery-item-detailed" data-caption="Спешна помощ">
+                    <img src="images/IMG_2404.HEIC" alt="Спешна" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="equipment" data-caption="Монитор за жизнени показатели">
-                    <img src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&h=800&fit=crop" alt="Монитори" class="gallery-image">
-                    <span class="gallery-category">Оборудване</span>
+                <div class="gallery-item-detailed" data-caption="Медицински персонал">
+                    <img src="images/IMG_2462.JPG" alt="Персонал" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="interior" data-caption="Климатик и вентилация в линейката">
-                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=800&fit=crop" alt="Климатик" class="gallery-image">
-                    <span class="gallery-category">Интериор</span>
+                <div class="gallery-item-detailed" data-caption="Оборудване">
+                    <img src="images/IMG_2466.HEIC" alt="Апаратура" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="team" data-caption="Квалифициран медицински специалист">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&h=800&fit=crop" alt="Специалист" class="gallery-image">
-                    <span class="gallery-category">Екип</span>
+                <div class="gallery-item-detailed" data-caption="Линейка">
+                    <img src="images/IMG_2474.JPG" alt="Линейка" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка тип Б - реанимобил">
-                    <img src="https://images.unsplash.com/photo-1587745416684-47953f16f02f?w=800&h=800&fit=crop&sat=-100" alt="Реанимобил" class="gallery-image">
-                    <span class="gallery-category">Линейки</span>
+                <div class="gallery-item-detailed" data-caption="Транспорт">
+                    <img src="images/IMG_3159.HEIC" alt="Транспорт" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="equipment" data-caption="Перфузор и инфузионни помпи">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=800&fit=crop" alt="Перфузор" class="gallery-image">
-                    <span class="gallery-category">Оборудване</span>
+                <div class="gallery-item-detailed" data-caption="Медицински екип">
+                    <img src="images/IMG_3160.HEIC" alt="Екип" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="interior" data-caption="Осветление и работно пространство">
-                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=800&fit=crop" alt="Осветление" class="gallery-image">
-                    <span class="gallery-category">Интериор</span>
+                <div class="gallery-item-detailed" data-caption="Спешна ситуация">
+                    <img src="images/IMG_3161.HEIC" alt="Спешна" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="equipment" data-caption="Спинална дъска и имобилизация">
-                    <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=800&h=800&fit=crop" alt="Имобилизация" class="gallery-image">
-                    <span class="gallery-category">Оборудване</span>
+                <div class="gallery-item-detailed" data-caption="Оборудвана линейка">
+                    <img src="images/IMG_3322.HEIC" alt="Линейка" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="ambulances" data-caption="Линейка с повдигната платформа">
-                    <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&h=800&fit=crop" alt="Платформа" class="gallery-image">
-                    <span class="gallery-category">Линейки</span>
+                <div class="gallery-item-detailed" data-caption="Специализиран транспорт">
+                    <img src="images/IMG_3368.jpg" alt="Транспорт" class="gallery-image">
                 </div>
-                
-                <div class="gallery-item-detailed" data-category="team" data-caption="Екип при спешна интервенция">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=800&fit=crop" alt="Интервенция" class="gallery-image">
-                    <span class="gallery-category">Екип</span>
+                <div class="gallery-item-detailed" data-caption="Реанимобил">
+                    <img src="images/IMG_3424.HEIC" alt="Реанимобил" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Медицински екип">
+                    <img src="images/IMG_3740.HEIC" alt="Екип" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Оборудване">
+                    <img src="images/IMG_3746.HEIC" alt="Апаратура" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Пациент">
+                    <img src="images/IMG_3785.HEIC" alt="Пациент" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Спешна помощ">
+                    <img src="images/IMG_3795.HEIC" alt="Спешна" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Медицински екип">
+                    <img src="images/IMG_3836.HEIC" alt="Екип" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Транспорт">
+                    <img src="images/IMG_3840.HEIC" alt="Транспорт" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Линейка">
+                    <img src="images/IMG_3917.HEIC" alt="Линейка" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Оборудване">
+                    <img src="images/IMG_3991.jpg" alt="Апаратура" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Екип">
+                    <img src="images/IMG_4697.HEIC" alt="Екип" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Пациент">
+                    <img src="images/IMG_4698.HEIC" alt="Пациент" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Транспорт">
+                    <img src="images/IMG_5071.HEIC" alt="Транспорт" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Медицински екип">
+                    <img src="images/IMG_5091.HEIC" alt="Екип" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Оборудване">
+                    <img src="images/IMG_5263.HEIC" alt="Апаратура" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Линейка">
+                    <img src="images/IMG_5264.HEIC" alt="Линейка" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Спешна помощ">
+                    <img src="images/IMG_5265.HEIC" alt="Спешна" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Транспорт">
+                    <img src="images/IMG_5266.HEIC" alt="Транспорт" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Екип">
+                    <img src="images/IMG_5267.HEIC" alt="Екип" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Пациент">
+                    <img src="images/IMG_5374.HEIC" alt="Пациент" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Оборудване">
+                    <img src="images/IMG_5375.HEIC" alt="Апаратура" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Линейка">
+                    <img src="images/ambulance-1.jpg" alt="Линейка" class="gallery-image">
+                </div>
+                <div class="gallery-item-detailed" data-caption="Медицинска апаратура">
+                    <img src="images/equipment-1.png" alt="Оборудване" class="gallery-image">
                 </div>
             </div>
         </div>
@@ -265,15 +249,21 @@
             <div class="ready-to-order-content">
                 <h2>Готови за поръчка?</h2>
                 <p>Свържете се с нас сега за бърза и професионална медицинска транспортна услуга</p>
-                <a href="tel:0890150160" class="btn btn-primary">
-                    <i class="fas fa-phone"></i>
-                    Обадете се: 0890 150 160
-                </a>
+                <div class="ready-call-buttons">
+                    <a href="tel:0890150160" class="btn btn-primary ready-call-single">
+                        <i class="fas fa-phone"></i>
+                        Плевен: 0890 150 160
+                    </a>
+                    <a href="tel:0888645380" class="btn btn-primary ready-call-single">
+                        <i class="fas fa-phone"></i>
+                        В. Търново: 0888 645 380
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -282,13 +272,14 @@
                         <i class="fas fa-ambulance"></i>
                         <span>Медтранс</span>
                     </div>
-                    <p>Професионален медицински транспорт с над 25 години опит в областта.</p>
+                    <p>Професионален медицински транспорт с над 30 години опит в областта.</p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Контакти</h4>
                     <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">0890 150 160</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">Плевен: 0890 150 160</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0888645380">В. Търново: 0888 645 380</a></p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:ivailo_73@abv.bg">ivailo_73@abv.bg</a></p>
                     </div>
                 </div>
@@ -296,10 +287,10 @@
                 <div class="footer-section">
                     <h4>Услуги</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Медицински транспорт</a></li>
-                        <li><a href="services.html">Репатриране</a></li>
-                        <li><a href="services.html">Медицински екип</a></li>
-                        <li><a href="services.html">Мероприятия</a></li>
+                        <li><a href="#services">Медицински транспорт</a></li>
+                        <li><a href="#services">Репатриране</a></li>
+                        <li><a href="#services">Медицински екип</a></li>
+                        <li><a href="#services">Мероприятия</a></li>
                     </ul>
                 </div>
                 
@@ -316,7 +307,6 @@
             </div>
         </div>
     </footer>
-
     <!-- Cookie Settings Button -->
     <button class="cookie-settings-btn" id="cookie-settings-btn" title="Настройки за бисквитки">
         <i class="fas fa-cookie-bite"></i>
@@ -331,6 +321,7 @@
         </div>
     </div>
 
+    <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
     <script>
         // Gallery filtering functionality
@@ -357,6 +348,47 @@
                     });
                 });
             });
+        });
+    </script>
+    <script>
+        // Dropdown fix for gallery page
+        document.addEventListener('DOMContentLoaded', function() {
+            const desktopBtn = document.getElementById('desktop-call-btn');
+            const desktopOptions = document.getElementById('desktop-call-options');
+            if (desktopBtn && desktopOptions) {
+                desktopBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    desktopOptions.classList.toggle('active');
+                    const chevron = this.querySelector('.fa-chevron-down');
+                    if (chevron) chevron.style.transform = desktopOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!desktopBtn.contains(e.target) && !desktopOptions.contains(e.target)) {
+                        desktopOptions.classList.remove('active');
+                        const chevron = desktopBtn.querySelector('.fa-chevron-down');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+            const mobileBtn = document.getElementById('mobile-call-btn');
+            const mobileOptions = document.getElementById('mobile-call-options');
+            if (mobileBtn && mobileOptions) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileOptions.classList.toggle('active');
+                    const chevron = this.querySelector('.fa-chevron-down');
+                    if (chevron) chevron.style.transform = mobileOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!mobileBtn.contains(e.target) && !mobileOptions.contains(e.target)) {
+                        mobileOptions.classList.remove('active');
+                        const chevron = mobileBtn.querySelector('.fa-chevron-down');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
         });
     </script>
 </body>

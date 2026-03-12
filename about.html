@@ -11,12 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
-    
     <!-- Additional Meta Tags -->
     <meta name="robots" content="index, follow">
     <meta name="language" content="Bulgarian">
@@ -30,84 +24,61 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <i class="fas fa-ambulance"></i>
                 <span>Медтранс</span>
-            </div>
+            </a>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Начало</a>
                 <a href="about.html" class="nav-link active">За нас</a>
                 <a href="services.html" class="nav-link">Услуги</a>
                 <a href="gallery.html" class="nav-link">Галерия</a>
-                <a href="pricing.html" class="nav-link">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
                 
                 <!-- Mobile Call Button -->
                 <div class="mobile-nav-action">
-                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
-                        <i class="fas fa-phone"></i>
-                        Позвънете
-                    </a>
-                </div>
-                
-                <!-- Mobile Language Selector -->
-                <div class="mobile-nav-action">
-                    <div class="language-selector mobile-language-selector">
-                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
-                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                    <div class="mobile-call-dropdown">
+                        <button class="btn btn-cta mobile-call-btn" id="mobile-call-btn">
+                            <i class="fas fa-phone"></i>
+                            Позвънете
                             <i class="fas fa-chevron-down"></i>
                         </button>
-                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
-                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
-                                <span>Български</span>
+                        <div class="mobile-call-options" id="mobile-call-options">
+                            <a href="tel:0890150160" class="mobile-call-option">
+                                <i class="fas fa-phone"></i>
+                                <span>Плевен</span>
+                                <small>0890 150 160</small>
                             </a>
-                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
-                                <span>English</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
-                                <span>Deutsch</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
-                                <span>Русский</span>
+                            <a href="tel:0888645380" class="mobile-call-option">
+                                <i class="fas fa-phone"></i>
+                                <span>В. Търново</span>
+                                <small>0888 645 380</small>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta desktop-only">
-                    <i class="fas fa-phone"></i>
-                    Позвънете
-                </a>
-                <div class="language-selector desktop-only">
-                    <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                <div class="desktop-call-dropdown">
+                    <button class="btn btn-cta desktop-call-btn" id="desktop-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
-                            <span>Български</span>
+                    <div class="desktop-call-options" id="desktop-call-options">
+                        <a href="tel:0890150160" class="desktop-call-option">
+                            <i class="fas fa-phone"></i>
+                            <span>Плевен</span>
+                            <small>0890 150 160</small>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
-                            <span>English</span>
-                        </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
-                            <span>Deutsch</span>
-                        </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
-                            <span>Русский</span>
+                        <a href="tel:0888645380" class="desktop-call-option">
+                            <i class="fas fa-phone"></i>
+                            <span>В. Търново</span>
+                            <small>0888 645 380</small>
                         </a>
                     </div>
                 </div>
-            </div>
+                </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -157,7 +128,8 @@
                             <i class="fas fa-phone"></i>
                             <div>
                                 <h4>Телефон</h4>
-                                <p><a href="tel:0890150160">0890 150 160</a></p>
+                                <p><a href="tel:0890150160">Плевен: 0890 150 160</a></p>
+                                <p><a href="tel:0888645380">В. Търново: 0888 645 380</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -173,26 +145,6 @@
                                 <h4>Работно време</h4>
                                 <p>24 часа на ден, 7 дни в седмицата</p>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <div class="stats-card">
-                        <h3>Нашият опит в цифри</h3>
-                        <div class="stat-item">
-                            <span class="stat-number">25+</span>
-                            <span class="stat-label">Години опит</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Доволни клиенти</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Достъпност</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Сигурност</span>
                         </div>
                     </div>
                 </div>
@@ -235,15 +187,21 @@
             <div class="ready-to-order-content">
                 <h2>Готови за поръчка?</h2>
                 <p>Свържете се с нас сега за бърза и професионална медицинска транспортна услуга</p>
-                <a href="tel:0890150160" class="btn btn-primary">
-                    <i class="fas fa-phone"></i>
-                    Обадете се: 0890 150 160
-                </a>
+                <div class="ready-call-buttons">
+                    <a href="tel:0890150160" class="btn btn-primary ready-call-single">
+                        <i class="fas fa-phone"></i>
+                        Плевен: 0890 150 160
+                    </a>
+                    <a href="tel:0888645380" class="btn btn-primary ready-call-single">
+                        <i class="fas fa-phone"></i>
+                        В. Търново: 0888 645 380
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -252,13 +210,14 @@
                         <i class="fas fa-ambulance"></i>
                         <span>Медтранс</span>
                     </div>
-                    <p>Професионален медицински транспорт с над 25 години опит в областта.</p>
+                    <p>Професионален медицински транспорт с над 30 години опит в областта.</p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Контакти</h4>
                     <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">0890 150 160</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">Плевен: 0890 150 160</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0888645380">В. Търново: 0888 645 380</a></p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:ivailo_73@abv.bg">ivailo_73@abv.bg</a></p>
                     </div>
                 </div>
@@ -266,10 +225,10 @@
                 <div class="footer-section">
                     <h4>Услуги</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Медицински транспорт</a></li>
-                        <li><a href="services.html">Репатриране</a></li>
-                        <li><a href="services.html">Медицински екип</a></li>
-                        <li><a href="services.html">Мероприятия</a></li>
+                        <li><a href="#services">Медицински транспорт</a></li>
+                        <li><a href="#services">Репатриране</a></li>
+                        <li><a href="#services">Медицински екип</a></li>
+                        <li><a href="#services">Мероприятия</a></li>
                     </ul>
                 </div>
                 
@@ -293,5 +252,57 @@
     </button>
 
     <script src="js/script.js"></script>
+    <script>
+        // Simple dropdown fix for about page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Desktop dropdown
+            const desktopBtn = document.getElementById('desktop-call-btn');
+            const desktopOptions = document.getElementById('desktop-call-options');
+            
+            if (desktopBtn && desktopOptions) {
+                desktopBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    desktopOptions.classList.toggle('active');
+                    const chevron = this.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = desktopOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                    }
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!desktopBtn.contains(e.target) && !desktopOptions.contains(e.target)) {
+                        desktopOptions.classList.remove('active');
+                        const chevron = desktopBtn.querySelector('.fa-chevron-down');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+            
+            // Mobile dropdown
+            const mobileBtn = document.getElementById('mobile-call-btn');
+            const mobileOptions = document.getElementById('mobile-call-options');
+            
+            if (mobileBtn && mobileOptions) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileOptions.classList.toggle('active');
+                    const chevron = this.querySelector('.fa-chevron-down');
+                    if (chevron) {
+                        chevron.style.transform = mobileOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                    }
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!mobileBtn.contains(e.target) && !mobileOptions.contains(e.target)) {
+                        mobileOptions.classList.remove('active');
+                        const chevron = mobileBtn.querySelector('.fa-chevron-down');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

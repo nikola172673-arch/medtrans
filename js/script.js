@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initLanguageSelector();
     initScrollIndicator();
     initCookieBanner();
+    initMobileCallDropdown(); // Added initialization call for mobile call dropdown
+    initDesktopCallDropdown(); // Added initialization call for desktop call dropdown
+    initHeroCallDropdown(); // Added initialization call for hero call dropdown
+    initReadyCallDropdown(); // Added initialization call for ready call dropdown
+    initImageCarousel(); // Added initialization call for image carousel
 });
 
 // Navigation functionality
@@ -18,6 +23,12 @@ function initNavigation() {
     const navMenu = document.getElementById('nav-menu');
     const navOverlay = document.getElementById('nav-overlay');
     const navLinks = document.querySelectorAll('.nav-link');
+
+    // Check if required elements exist
+    if (!navbar || !navToggle || !navMenu || !navOverlay) {
+        console.log('Navigation elements not found - skipping navigation initialization');
+        return;
+    }
 
     // Sticky navigation on scroll
     window.addEventListener('scroll', function() {
@@ -29,7 +40,9 @@ function initNavigation() {
     });
 
     // Mobile menu toggle
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         const isActive = navToggle.classList.toggle('active');
         navMenu.classList.toggle('active');
         navOverlay.classList.toggle('active');
@@ -128,6 +141,12 @@ function initGallery() {
     const modalImage = document.getElementById('modal-image');
     const modalCaption = document.getElementById('modal-caption');
     const modalClose = document.querySelector('.modal-close');
+
+    // Check if gallery elements exist on this page
+    if (!modal || !modalImage || !modalCaption || !modalClose) {
+        console.log('Gallery modal elements not found on this page - skipping gallery initialization');
+        return;
+    }
 
     // Open modal when clicking gallery items
     galleryItems.forEach(item => {
@@ -578,6 +597,288 @@ const debouncedScrollHandler = debounce(() => {
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
+// Image Carousel functionality
+function initImageCarousel() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (slides.length === 0) return;
+    
+    // Show specific slide
+    window.showSlide = function(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        indicators[index].classList.add('active');
+        currentSlide = index;
+    };
+    
+    // Auto-advance carousel
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 4000);
+    
+    // Initialize first slide
+    showSlide(0);
+}
+
+// Hero Call Dropdown functionality
+function initHeroCallDropdown() {
+    const heroCallBtn = document.getElementById('hero-call-btn');
+    const heroCallOptions = document.getElementById('hero-call-options');
+    
+    if (heroCallBtn && heroCallOptions) {
+        console.log('Hero call dropdown initialized');
+        
+        // Toggle dropdown
+        heroCallBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hero call button clicked');
+            
+            heroCallOptions.classList.toggle('active');
+            
+            // Rotate chevron icon
+            const chevron = this.querySelector('.fa-chevron-down');
+            if (chevron) {
+                chevron.style.transform = heroCallOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!heroCallBtn.contains(e.target) && !heroCallOptions.contains(e.target)) {
+                heroCallOptions.classList.remove('active');
+                const chevron = heroCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+        
+        // Close dropdown when clicking on an option
+        const options = heroCallOptions.querySelectorAll('.hero-call-option');
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                heroCallOptions.classList.remove('active');
+                const chevron = heroCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    } else {
+        console.error('Hero call dropdown elements not found:', { heroCallBtn, heroCallOptions });
+    }
+}
+
+// Ready Call Dropdown functionality
+function initReadyCallDropdown() {
+    const readyCallBtn = document.getElementById('ready-call-btn');
+    const readyCallOptions = document.getElementById('ready-call-options');
+    
+    if (readyCallBtn && readyCallOptions) {
+        console.log('Ready call dropdown initialized');
+        
+        // Toggle dropdown
+        readyCallBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Ready call button clicked');
+            
+            readyCallOptions.classList.toggle('active');
+            
+            // Rotate chevron icon
+            const chevron = this.querySelector('.fa-chevron-down');
+            if (chevron) {
+                chevron.style.transform = readyCallOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!readyCallBtn.contains(e.target) && !readyCallOptions.contains(e.target)) {
+                readyCallOptions.classList.remove('active');
+                const chevron = readyCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+        
+        // Close dropdown when clicking on an option
+        const options = readyCallOptions.querySelectorAll('.ready-call-option');
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                readyCallOptions.classList.remove('active');
+                const chevron = readyCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    } else {
+        console.error('Ready call dropdown elements not found:', { readyCallBtn, readyCallOptions });
+    }
+}
+
+// Desktop Call Dropdown functionality
+function initDesktopCallDropdown() {
+    const desktopCallBtn = document.getElementById('desktop-call-btn');
+    const desktopCallOptions = document.getElementById('desktop-call-options');
+    
+    console.log('Desktop call dropdown initialization:', { desktopCallBtn, desktopCallOptions });
+    
+    if (desktopCallBtn && desktopCallOptions) {
+        console.log('Desktop call dropdown initialized');
+        
+        // Remove any existing event listeners to prevent duplicates
+        const newDesktopCallBtn = desktopCallBtn.cloneNode(true);
+        desktopCallBtn.parentNode.replaceChild(newDesktopCallBtn, desktopCallBtn);
+        
+        // Toggle dropdown
+        newDesktopCallBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Desktop call button clicked');
+            
+            // Close any other open dropdowns first
+            const allDropdowns = document.querySelectorAll('.desktop-call-options, .mobile-call-options, .hero-call-options, .ready-call-options');
+            allDropdowns.forEach(dropdown => {
+                if (dropdown !== desktopCallOptions) {
+                    dropdown.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            const isActive = desktopCallOptions.classList.toggle('active');
+            console.log('Dropdown toggled:', isActive);
+            
+            // Rotate chevron icon
+            const chevron = this.querySelector('.fa-chevron-down');
+            if (chevron) {
+                chevron.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+            
+            // Force visibility as backup
+            if (isActive) {
+                desktopCallOptions.style.display = 'block';
+                desktopCallOptions.style.zIndex = '999999';
+                desktopCallOptions.style.opacity = '1';
+                desktopCallOptions.style.visibility = 'visible';
+            } else {
+                desktopCallOptions.style.display = 'none';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!newDesktopCallBtn.contains(e.target) && !desktopCallOptions.contains(e.target)) {
+                desktopCallOptions.classList.remove('active');
+                desktopCallOptions.style.display = 'none';
+                const chevron = newDesktopCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+        
+        // Close dropdown when clicking on an option
+        const options = desktopCallOptions.querySelectorAll('.desktop-call-option');
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                desktopCallOptions.classList.remove('active');
+                desktopCallOptions.style.display = 'none';
+                const chevron = newDesktopCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        
+        // Also add hover functionality for desktop
+        newDesktopCallBtn.addEventListener('mouseenter', function() {
+            desktopCallOptions.classList.add('active');
+            desktopCallOptions.style.display = 'block';
+            desktopCallOptions.style.zIndex = '999999';
+            desktopCallOptions.style.opacity = '1';
+            desktopCallOptions.style.visibility = 'visible';
+            const chevron = this.querySelector('.fa-chevron-down');
+            if (chevron) {
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        });
+        
+        const dropdownContainer = newDesktopCallBtn.closest('.desktop-call-dropdown');
+        if (dropdownContainer) {
+            dropdownContainer.addEventListener('mouseleave', function() {
+                desktopCallOptions.classList.remove('active');
+                desktopCallOptions.style.display = 'none';
+                const chevron = newDesktopCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        }
+        
+    } else {
+        console.warn('Desktop call dropdown elements not found on this page');
+    }
+}
+
+// Mobile Call Dropdown functionality
+function initMobileCallDropdown() {
+    const mobileCallBtn = document.getElementById('mobile-call-btn');
+    const mobileCallOptions = document.getElementById('mobile-call-options');
+    
+    if (mobileCallBtn && mobileCallOptions) {
+        console.log('Mobile call dropdown initialized');
+        
+        // Toggle dropdown
+        mobileCallBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Mobile call button clicked');
+            
+            mobileCallOptions.classList.toggle('active');
+            
+            // Rotate chevron icon
+            const chevron = this.querySelector('.fa-chevron-down');
+            if (chevron) {
+                chevron.style.transform = mobileCallOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+            }
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileCallBtn.contains(e.target) && !mobileCallOptions.contains(e.target)) {
+                mobileCallOptions.classList.remove('active');
+                const chevron = mobileCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+        
+        // Close dropdown when clicking on an option
+        const options = mobileCallOptions.querySelectorAll('.mobile-call-option');
+        options.forEach(option => {
+            option.addEventListener('click', function() {
+                mobileCallOptions.classList.remove('active');
+                const chevron = mobileCallBtn.querySelector('.fa-chevron-down');
+                if (chevron) {
+                    chevron.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+    } else {
+        console.error('Mobile call dropdown elements not found:', { mobileCallBtn, mobileCallOptions });
+    }
+}
+
 // Language Selector functionality
 function initLanguageSelector() {
     // Desktop language selector
@@ -597,6 +898,14 @@ function initLanguageSelector() {
         mobileLangBtn, mobileLangDropdown,
         langOptions: langOptions.length
     });
+    
+    // Simple test - try to click the mobile button programmatically
+    setTimeout(() => {
+        if (mobileLangBtn) {
+            console.log('Testing mobile language button click...');
+            mobileLangBtn.click();
+        }
+    }, 1000);
 
     // Desktop language selector
     if (langBtn && langDropdown) {
@@ -620,13 +929,31 @@ function initLanguageSelector() {
 
     // Mobile language selector
     if (mobileLangBtn && mobileLangDropdown) {
+        console.log('Mobile language selector found');
+        
         // Toggle dropdown
         mobileLangBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Mobile language button clicked');
+            console.log('Mobile language button clicked - before toggle');
+            console.log('Current classes:', mobileLangBtn.className, mobileLangDropdown.className);
+            
             mobileLangBtn.classList.toggle('active');
             mobileLangDropdown.classList.toggle('active');
+            
+            // Force display style as backup
+            if (mobileLangDropdown.classList.contains('active')) {
+                mobileLangDropdown.style.display = 'block';
+                mobileLangDropdown.style.zIndex = '9999';
+                mobileLangDropdown.style.opacity = '1';
+                mobileLangDropdown.style.visibility = 'visible';
+            } else {
+                mobileLangDropdown.style.display = 'none';
+            }
+            
+            console.log('Mobile language button clicked - after toggle');
+            console.log('New classes:', mobileLangBtn.className, mobileLangDropdown.className);
+            console.log('Dropdown display style:', window.getComputedStyle(mobileLangDropdown).display);
         });
 
         // Close dropdown when clicking outside
@@ -634,8 +961,11 @@ function initLanguageSelector() {
             if (!mobileLangBtn.contains(e.target) && !mobileLangDropdown.contains(e.target)) {
                 mobileLangBtn.classList.remove('active');
                 mobileLangDropdown.classList.remove('active');
+                mobileLangDropdown.style.display = 'none';
             }
         });
+    } else {
+        console.error('Mobile language selector elements not found:', { mobileLangBtn, mobileLangDropdown });
     }
 
     // Handle language selection for both desktop and mobile
