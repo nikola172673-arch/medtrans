@@ -28,84 +28,61 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
+            <a href="#home" class="nav-logo">
                 <i class="fas fa-ambulance"></i>
                 <span>Медтранс</span>
-            </div>
+            </a>
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Начало</a>
                 <a href="about.html" class="nav-link">За нас</a>
                 <a href="services.html" class="nav-link active">Услуги</a>
                 <a href="gallery.html" class="nav-link">Галерия</a>
-                <a href="pricing.html" class="nav-link">Цени</a>
                 <a href="contact.html" class="nav-link">Контакти</a>
                 
                 <!-- Mobile Call Button -->
                 <div class="mobile-nav-action">
-                    <a href="tel:0890150160" class="btn btn-cta mobile-call-btn">
-                        <i class="fas fa-phone"></i>
-                        Позвънете
-                    </a>
-                </div>
-                
-                <!-- Mobile Language Selector -->
-                <div class="mobile-nav-action">
-                    <div class="language-selector mobile-language-selector">
-                        <button class="lang-btn mobile-lang-btn" id="mobile-lang-btn">
-                            <img id="mobile-current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                    <div class="mobile-call-dropdown">
+                        <button class="btn btn-cta mobile-call-btn" id="mobile-call-btn">
+                            <i class="fas fa-phone"></i>
+                            Позвънете
                             <i class="fas fa-chevron-down"></i>
                         </button>
-                        <div class="lang-dropdown mobile-lang-dropdown" id="mobile-lang-dropdown">
-                            <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
-                                <span>Български</span>
+                        <div class="mobile-call-options" id="mobile-call-options">
+                            <a href="tel:0890150160" class="mobile-call-option">
+                                <i class="fas fa-phone"></i>
+                                <span>Плевен</span>
+                                <small>0890 150 160</small>
                             </a>
-                            <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
-                                <span>English</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
-                                <span>Deutsch</span>
-                            </a>
-                            <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
-                                <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
-                                <span>Русский</span>
+                            <a href="tel:0888645380" class="mobile-call-option">
+                                <i class="fas fa-phone"></i>
+                                <span>В. Търново</span>
+                                <small>0888 645 380</small>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="nav-actions">
-                <a href="tel:0890150160" class="btn btn-cta desktop-only">
-                    <i class="fas fa-phone"></i>
-                    Позвънете
-                </a>
-                <div class="language-selector desktop-only">
-                    <button class="lang-btn" id="lang-btn">
-                        <img id="current-flag" class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
+                <div class="desktop-call-dropdown">
+                    <button class="btn btn-cta desktop-call-btn" id="desktop-call-btn">
+                        <i class="fas fa-phone"></i>
+                        Позвънете
                         <i class="fas fa-chevron-down"></i>
                     </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" class="lang-option active" data-lang="bg" data-flag="https://flagcdn.com/w40/bg.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/bg.png" alt="BG">
-                            <span>Български</span>
+                    <div class="desktop-call-options" id="desktop-call-options">
+                        <a href="tel:0890150160" class="desktop-call-option">
+                            <i class="fas fa-phone"></i>
+                            <span>Плевен</span>
+                            <small>0890 150 160</small>
                         </a>
-                        <a href="#" class="lang-option" data-lang="en" data-flag="https://flagcdn.com/w40/gb.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/gb.png" alt="EN">
-                            <span>English</span>
-                        </a>
-                        <a href="#" class="lang-option" data-lang="de" data-flag="https://flagcdn.com/w40/de.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/de.png" alt="DE">
-                            <span>Deutsch</span>
-                        </a>
-                        <a href="#" class="lang-option" data-lang="ru" data-flag="https://flagcdn.com/w40/ru.png">
-                            <img class="flag-img" src="https://flagcdn.com/w40/ru.png" alt="RU">
-                            <span>Русский</span>
+                        <a href="tel:0888645380" class="desktop-call-option">
+                            <i class="fas fa-phone"></i>
+                            <span>В. Търново</span>
+                            <small>0888 645 380</small>
                         </a>
                     </div>
                 </div>
-            </div>
+                </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -120,127 +97,114 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Нашите услуги</h1>
-            <p>Комплексно медицинско обслужване за всяка нужда</p>
+            <h1>Услуги</h1>
+            <p>Професионален медицински транспорт с дългогодишен опит</p>
         </div>
     </section>
 
     <!-- Services Main -->
-    <section class="services-detailed">
+    <section class="services-modern">
         <div class="container">
-            <div class="services-grid">
-                <div class="service-card-detailed">
-                    <div class="service-icon">
+            <div class="section-header">
+                <h2>Нашите услуги</h2>
+                <p>Професионален медицински транспорт за всяка нужда</p>
+            </div>
+            
+            <div class="services-grid-modern">
+                <div class="service-card-modern" data-aos="fade-up">
+                    <div class="service-icon-modern">
                         <i class="fas fa-ambulance"></i>
                     </div>
-                    <h3>Специализиран медицински транспорт</h3>
-                    <p>Пътуване с оборудвана линейка за болни и трудно подвижни хора с пълно медицинско оборудване. Нашите линейки са оборудвани с всички необходими медицински прибори и устройства за осигуряване на максимална сигурност и комфорт на пациента.</p>
-                    
-                    <h4>Включва:</h4>
-                    <ul class="service-features">
-                        <li>Оборудвана медицинска линейка</li>
-                        <li>Медицински персонал</li>
-                        <li>Мониторинг на жизнените показатели</li>
-                        <li>Кислородна система</li>
-                        <li>Дефибрилатор и спешна медикация</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                    <div class="service-content-modern">
+                        <h3>Специализиран медицински транспорт</h3>
+                        <p>Оборудвани линейки за безопасен транспорт на болни и трудно подвижни пациенти с пълно медицинско наблюдение.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Медицинско оборудване</span>
+                            <span><i class="fas fa-check"></i> Квалифициран персонал</span>
+                            <span><i class="fas fa-check"></i> Мониторинг на показатели</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Заяви услуга</a>
+                    </div>
                 </div>
                 
-                <div class="service-card-detailed">
-                    <div class="service-icon">
+                <div class="service-card-modern" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-modern">
                         <i class="fas fa-globe-europe"></i>
                     </div>
-                    <h3>Репатриране в чужбина</h3>
-                    <p>Безопасно транспортиране в Европа и други страни с всички необходими документи и разрешения. Организираме цялостното пътуване от България до дестинацията, включително медицинско придружаване.</p>
-                    
-                    <h4>Включва:</h4>
-                    <ul class="service-features">
-                        <li>Международен медицински транспорт</li>
-                        <li>Всички необходими документи</li>
-                        <li>Медицинско придружаване</li>
-                        <li>Координация с местни власти</li>
-                        <li>24/7 поддръжка по време на пътуването</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                    <div class="service-content-modern">
+                        <h3>Репатриране в чужбина</h3>
+                        <p>Международен медицински транспорт с всички необходими документи и разрешения за безопасно пътуване до Европа.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Международен транспорт</span>
+                            <span><i class="fas fa-check"></i> Всички документи</span>
+                            <span><i class="fas fa-check"></i> Медицинско придружаване</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Заяви услуга</a>
+                    </div>
                 </div>
                 
-                <div class="service-card-detailed">
-                    <div class="service-icon">
+                <div class="service-card-modern" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-modern">
                         <i class="fas fa-user-md"></i>
                     </div>
-                    <h3>Медицински екип</h3>
-                    <p>Професионално придружаване с квалифициран медицински персонал при нужда. Нашият екип включва лекари, медицински сестри и специалисти по спешна медицина.</p>
-                    
-                    <h4>Включва:</h4>
-                    <ul class="service-features">
-                        <li>Квалифициран медицински персонал</li>
-                        <li>Медицинска оценка на състоянието</li>
-                        <li>Континуирано наблюдение</li>
-                        <li>Спешна медицинска помощ при нужда</li>
-                        <li>Координация с лечебни заведения</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                    <div class="service-content-modern">
+                        <h3>Медицински екип</h3>
+                        <p>Професионално придружаване с квалифициран медицински персонал - лекари, сестри и спешни специалисти.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Квалифициран екип</span>
+                            <span><i class="fas fa-check"></i> Медицинска оценка</span>
+                            <span><i class="fas fa-check"></i> Спешна помощ</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Заяви услуга</a>
+                    </div>
                 </div>
                 
-                <div class="service-card-detailed">
-                    <div class="service-icon">
+                <div class="service-card-modern" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-modern">
                         <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <h3>Обслужване на мероприятия</h3>
-                    <p>Медицинска поддръжка за спортни, концертни и други мероприятия. Осигуряваме бърза медицинска помощ и евакуация при нужда.</p>
-                    
-                    <h4>Включва:</h4>
-                    <ul class="service-features">
-                        <li>Медицинска поддръжка на събития</li>
-                        <li>Спешна помощ при нужда</li>
-                        <li>Евакуация до лечебно заведение</li>
-                        <li>Координация с организаторите</li>
-                        <li>Медицинско оборудване на място</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                    <div class="service-content-modern">
+                        <h3>Обслужване на мероприятия</h3>
+                        <p>Медицинска поддръжка за спортни, концертни и други събития с бърза реакция при инциденти.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Медицинска поддръжка</span>
+                            <span><i class="fas fa-check"></i> Спешна евакуация</span>
+                            <span><i class="fas fa-check"></i> Оборудване на място</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Заяви услуга</a>
+                    </div>
                 </div>
                 
-                <div class="service-card-detailed">
-                    <div class="service-icon">
+                <div class="service-card-modern" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon-modern">
                         <i class="fas fa-hospital"></i>
                     </div>
-                    <h3>Транспорт до/от лечебни заведения</h3>
-                    <p>Транспорт до/от болници, домове, старчески домове, хосписи. Специализирани линейки за различни типове пациенти и медицински състояния.</p>
-                    
-                    <h4>Включва:</h4>
-                    <ul class="service-features">
-                        <li>Транспорт до болници и клиники</li>
-                        <li>Транспорт от домове и старчески домове</li>
-                        <li>Транспорт до/от хосписи</li>
-                        <li>Специализирано оборудване</li>
-                        <li>Медицински персонал при нужда</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                    <div class="service-content-modern">
+                        <h3>Транспорт до лечебни заведения</h3>
+                        <p>Транспорт до/от болници, домове, старчески домове и хосписи със специализирани линейки.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> До болници и клиники</span>
+                            <span><i class="fas fa-check"></i> От дома и институции</span>
+                            <span><i class="fas fa-check"></i> Специализирано оборудване</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Заяви услуга</a>
+                    </div>
                 </div>
                 
-                <div class="service-card-detailed">
-                    <div class="service-icon">
+                <div class="service-card-modern" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon-modern">
                         <i class="fas fa-wheelchair"></i>
                     </div>
-                    <h3>Транспорт на хора с увреждания</h3>
-                    <p>Специализиран транспорт с подходящо оборудване за хора с ограничена подвижност. Осигуряваме достъпни линейки и професионално отношение.</p>
-                    
-                    <h4>Включва:</h4>
-                    <ul class="service-features">
-                        <li>Специализирани линейки с рампи</li>
-                        <li>Оборудване за хора с увреждания</li>
-                        <li>Обучен персонал</li>
-                        <li>Индивидуален подход</li>
-                        <li>Максимален комфорт и сигурност</li>
-                    </ul>
-                    
-                    <a href="contact.html" class="btn btn-primary">Заяви услуга</a>
+                    <div class="service-content-modern">
+                        <h3>Транспорт на хора с увреждания</h3>
+                        <p>Специализиран транспорт с рампи и подходящо оборудване за хора с ограничена подвижност.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Достъпни линейки</span>
+                            <span><i class="fas fa-check"></i> Обучен персонал</span>
+                            <span><i class="fas fa-check"></i> Максимален комфорт</span>
+                        </div>
+                        <a href="contact.html" class="service-btn">Заяви услуга</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -363,13 +327,19 @@
     <!-- Ready to Order Section -->
     <section class="ready-to-order">
         <div class="container">
-            <div class="ready-to-order-content">
+                <div class="ready-to-order-content">
                 <h2>Готови за поръчка?</h2>
                 <p>Свържете се с нас сега за бърза и професионална медицинска транспортна услуга</p>
-                <a href="tel:0890150160" class="btn btn-primary">
-                    <i class="fas fa-phone"></i>
-                    Обадете се: 0890 150 160
-                </a>
+                <div class="ready-call-buttons">
+                    <a href="tel:0890150160" class="btn btn-primary ready-call-single">
+                        <i class="fas fa-phone"></i>
+                        Плевен: 0890 150 160
+                    </a>
+                    <a href="tel:0888645380" class="btn btn-primary ready-call-single">
+                        <i class="fas fa-phone"></i>
+                        В. Търново: 0888 645 380
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -383,13 +353,14 @@
                         <i class="fas fa-ambulance"></i>
                         <span>Медтранс</span>
                     </div>
-                    <p>Професионален медицински транспорт с над 25 години опит в областта.</p>
+                    <p>Професионален медицински транспорт с над 30 години опит в областта.</p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Контакти</h4>
                     <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">0890 150 160</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0890150160">Плевен: 0890 150 160</a></p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:0888645380">В. Търново: 0888 645 380</a></p>
                         <p><i class="fas fa-envelope"></i> <a href="mailto:ivailo_73@abv.bg">ivailo_73@abv.bg</a></p>
                     </div>
                 </div>
@@ -397,10 +368,10 @@
                 <div class="footer-section">
                     <h4>Услуги</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Медицински транспорт</a></li>
-                        <li><a href="services.html">Репатриране</a></li>
-                        <li><a href="services.html">Медицински екип</a></li>
-                        <li><a href="services.html">Мероприятия</a></li>
+                        <li><a href="#services">Медицински транспорт</a></li>
+                        <li><a href="#services">Репатриране</a></li>
+                        <li><a href="#services">Медицински екип</a></li>
+                        <li><a href="#services">Мероприятия</a></li>
                     </ul>
                 </div>
                 
@@ -417,12 +388,52 @@
             </div>
         </div>
     </footer>
-
     <!-- Cookie Settings Button -->
     <button class="cookie-settings-btn" id="cookie-settings-btn" title="Настройки за бисквитки">
         <i class="fas fa-cookie-bite"></i>
     </button>
 
     <script src="js/script.js"></script>
+    <script>
+        // Dropdown fix for services page
+        document.addEventListener('DOMContentLoaded', function() {
+            const desktopBtn = document.getElementById('desktop-call-btn');
+            const desktopOptions = document.getElementById('desktop-call-options');
+            if (desktopBtn && desktopOptions) {
+                desktopBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    desktopOptions.classList.toggle('active');
+                    const chevron = this.querySelector('.fa-chevron-down');
+                    if (chevron) chevron.style.transform = desktopOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!desktopBtn.contains(e.target) && !desktopOptions.contains(e.target)) {
+                        desktopOptions.classList.remove('active');
+                        const chevron = desktopBtn.querySelector('.fa-chevron-down');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+            const mobileBtn = document.getElementById('mobile-call-btn');
+            const mobileOptions = document.getElementById('mobile-call-options');
+            if (mobileBtn && mobileOptions) {
+                mobileBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    mobileOptions.classList.toggle('active');
+                    const chevron = this.querySelector('.fa-chevron-down');
+                    if (chevron) chevron.style.transform = mobileOptions.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                });
+                document.addEventListener('click', function(e) {
+                    if (!mobileBtn.contains(e.target) && !mobileOptions.contains(e.target)) {
+                        mobileOptions.classList.remove('active');
+                        const chevron = mobileBtn.querySelector('.fa-chevron-down');
+                        if (chevron) chevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
